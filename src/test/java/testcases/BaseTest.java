@@ -5,16 +5,19 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 import base.DriverFactory;
+import pages.Loginpage;
 import utilities.ConfigReader;
 
 public class BaseTest {
 	
 	public WebDriver driver;
+	public Loginpage lp;
 	
 	@BeforeTest
 	public void setUp() {
 		driver = DriverFactory.initDriver(ConfigReader.getBrowser());
 		driver.get(ConfigReader.getBaseUrl());
+		lp = new Loginpage(driver);
 	}
 	
 	@AfterTest
