@@ -17,6 +17,7 @@ public class Loginpage extends Basepage{
 	@FindBy(xpath = "//input[@name='username']") private WebElement Username;
 	@FindBy(xpath = "//input[@name='password']") private WebElement Password;
 	@FindBy(xpath = "//button[@type='submit']") private WebElement LoginButton;
+	@FindBy(xpath = "//p[@class='oxd-text oxd-text--p orangehrm-login-forgot-header']") private WebElement Forgotpassword;
 	
 	public String getTitle() {
 		return Title.getText();
@@ -30,6 +31,12 @@ public class Loginpage extends Basepage{
 	}
 	public void clickLoginButton() {
 		LoginButton.click();
+	}
+	public void clickForgotpassword() {
+		Forgotpassword.click();
+	}
+	public boolean verifylogo() {
+		return Logo.isDisplayed();
 	}
 	
 	
