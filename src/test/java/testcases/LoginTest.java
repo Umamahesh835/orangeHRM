@@ -18,6 +18,11 @@ public class LoginTest extends BaseTest{
 	public void verify_logo() {
 		boolean logostatus=lp.verifylogo();
 		System.out.println(logostatus);
+		boolean user=lp.verifyUsernametext();
+		System.out.println("username text displayed :"+user);
+		boolean passwd = lp.verifypasswordtext();
+		System.out.println("passsword text displayed :"+passwd);
+		
 	}
 
 }
