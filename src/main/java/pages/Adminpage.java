@@ -25,4 +25,11 @@ public class Adminpage extends Basepage{
 		Select s =new Select(UserRole);
 		s.selectByVisibleText(text);
 	}
+	public void enterEmployeeName(String text) {
+		EmployeeName.sendKeys(text);
+	}
+	public void selectStatus(String text) {
+		Select status = new Select(Status);
+		status.selectByVisibleText(text);
+	}
 }
