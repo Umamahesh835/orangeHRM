@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
-import base.DriverFactory;
+import driver.DriverFactory;
 import pages.Loginpage;
 import utilities.ConfigReader;
 
